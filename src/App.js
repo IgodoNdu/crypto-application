@@ -5,6 +5,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from "antd";
 //import components efficiently
 import { Navbar } from "./components";
+import './App.css'
 
 function App() {
   return (
