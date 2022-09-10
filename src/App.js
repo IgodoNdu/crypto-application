@@ -3,11 +3,14 @@ import React from "react";
 import { Switch, Route, Link } from 'react-router-dom';
 // Ant Design
 import { Layout, Typography, Space } from "antd";
+//import components efficiently
+import { Navbar } from "./components";
 
 function App() {
   return (
     <div className="app">
       <div className="navbar">
+        <Navbar />
       </div>  
       <div className="main">
           <h1>Hello</h1>
