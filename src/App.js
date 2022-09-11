@@ -1,6 +1,6 @@
 import React from "react";
 // Routing
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 // Ant Design
 import { Layout, Typography, Space } from "antd";
 //import components efficiently
@@ -14,27 +14,17 @@ function App() {
         <Navbar />
       </div>  
       <div className="main">
-          <Layout>
-            <div className="routes">
-              <Router>
-                <Route exact path="/">
-                  <Homepage />
-                </Route>
-                <Route exact path="/exchanges">
-                  <Exchanges />
-                </Route>
-                <Route exact path="/cryptocurrencies">
-                  <Cryptocurrencies />
-                </Route>
-                <Route exact path="/crypto/:coinId">
-                  <CryptoDetails />
-                </Route>
-                <Route exact path="/news">
-                  <News />
-                </Route>
-              </Router>
-            </div>
-          </Layout>
+        <Layout>
+          <div className="routes">
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/exchanges" element={<Exchanges />} />
+              <Route exact path="/cryptocurrencies" element={<Cryptocurrencies/>} />
+              <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
+              <Route exact path="/news" element={<News />} />
+            </Routes>
+          </div>
+        </Layout>
       </div>
       <div className="footer">
 
