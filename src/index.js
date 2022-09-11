@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+//Ant Design Styling
+import 'antd/dist/antd.css'
 // Routing
 import { BrowserRouter as Router } from 'react-router-dom';
 
