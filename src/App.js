@@ -4,7 +4,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 // Ant Design
 import { Layout, Typography, Space } from "antd";
 //import components efficiently
-import { Navbar } from "./components";
+import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } from "./components";
 import './App.css'
 
 function App() {
@@ -14,7 +14,27 @@ function App() {
         <Navbar />
       </div>  
       <div className="main">
-          <h1>Hello</h1>
+          <Layout>
+            <div className="routes">
+              <Switch>
+                <Route exact path="/">
+                  <Homepage />
+                </Route>
+                <Route exact path="/exchanges">
+                  <Exchanges />
+                </Route>
+                <Route exact path="/cryptocurrencies">
+                  <Cryptocurrencies />
+                </Route>
+                <Route exact path="/crypto/:coinId">
+                  <CryptoDetails />
+                </Route>
+                <Route exact path="/news">
+                  <News />
+                </Route>
+              </Switch>
+            </div>
+          </Layout>
       </div>
       <div className="footer">
 
