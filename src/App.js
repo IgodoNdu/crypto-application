@@ -1,6 +1,6 @@
 import React from "react";
 // Routing
-import { Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // Ant Design
 import { Layout, Typography, Space } from "antd";
 //import components efficiently
@@ -16,7 +16,7 @@ function App() {
       <div className="main">
           <Layout>
             <div className="routes">
-              <Switch>
+              <Router>
                 <Route exact path="/">
                   <Homepage />
                 </Route>
@@ -32,7 +32,7 @@ function App() {
                 <Route exact path="/news">
                   <News />
                 </Route>
-              </Switch>
+              </Router>
             </div>
           </Layout>
       </div>
