@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 //Ant Design Styling
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.min.css'
 // Routing
 import { BrowserRouter as Router } from 'react-router-dom';
 
